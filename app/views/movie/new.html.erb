@@ -1,0 +1,24 @@
+<h1>Movie#new</h1>
+<p>Find me in app/views/movie/new.html.erb</p>
+<h1 class="text-danger">Movies#new</h1>
+<p class="text-danger-emphasis">Ingresar Pelicula Nueva</p>
+
+<%= form_with model: @movie, method: :post do |form| %>
+    <div class="col-4">
+        <div class="text-success">
+            <%= form.label :title, "Nombre pelicula" , class: "form-label" %>
+                <%= form.text_field :name, class: "form-control" %>
+        </div>
+        <div class="text-success">
+            <%= form.label :content, "Sinopsis" , class: "form-label" %>
+                <%= form.text_field :synopsis, class: "form-control" %>
+        </div>
+        <div class="text-success">
+            <%= form.label :title, "Nombre director" , class: "form-label" %>
+                <%= form.text_field :director, class: "form-control" %>
+        </div>
+        <div>
+            <%= form.submit "Submit" , class: "btn btn-success" %>
+        </div>
+    </div>
+    <% end %>
